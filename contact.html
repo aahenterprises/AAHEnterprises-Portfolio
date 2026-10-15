@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact | AAH Enterprises</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            color: #e9ecff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background:
+                    radial-gradient(circle at 85% 8%, rgba(124,58,237,0.45), transparent 40%),
+                    radial-gradient(circle at 5% 55%, rgba(34,211,238,0.20), transparent 40%),
+                    radial-gradient(circle at 75% 92%, rgba(37,99,235,0.35), transparent 45%),
+                    #070920;
+        }
+
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            gap: 16px; flex-wrap: wrap;
+            margin: 22px 5% 0; padding: 12px 14px 12px 26px;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 60px;
+            background: rgba(255,255,255,0.06);
+            backdrop-filter: blur(14px);
+        }
+        .logo { font-family: 'Playfair Display', Georgia, serif; font-size: 22px; color: #fff; }
+        nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+        nav a { color: #b9c0e6; text-decoration: none; font-size: 14px; padding: 9px 14px; border-radius: 30px; }
+        nav a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+        nav a.active { color: #fff; background: rgba(124,58,237,0.55); }
+        nav a.cta { background: linear-gradient(90deg, #7c3aed, #2563eb); color: #fff; }
+
+        h1, h2 { font-family: 'Playfair Display', Georgia, serif; color: #fff; }
+        .grad {
+            background: linear-gradient(90deg, #a78bfa, #22d3ee);
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+        }
+
+        .intro { padding: 70px 8% 30px; max-width: 900px; animation: rise 0.9s ease both; }
+        .intro h1 { font-size: 56px; line-height: 1.1; margin-bottom: 18px; }
+        .intro p { font-weight: 300; color: #c4caee; line-height: 1.9; max-width: 560px; }
+
+        .grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+            padding: 30px 8% 90px;
+        }
+        .way {
+            display: flex; flex-direction: column; justify-content: space-between;
+            min-height: 170px; padding: 26px 26px 22px;
+            text-decoration: none; color: inherit;
+            border: 1px solid rgba(255,255,255,0.14); border-radius: 22px;
+            background: linear-gradient(135deg, rgba(124,58,237,0.20), rgba(34,211,238,0.07));
+        }
+        .way:hover { border-color: #22d3ee; background: linear-gradient(135deg, rgba(124,58,237,0.32), rgba(34,211,238,0.14)); }
+        .way h2 {
+            font-size: 32px; line-height: 1.1; margin-bottom: 6px;
+            background: linear-gradient(90deg, #fff, #a78bfa 60%, #22d3ee);
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+        }
+        .way p { color: #b9c0e6; font-weight: 300; font-size: 14px; line-height: 1.6; }
+        .way span { color: #67e8f9; font-size: 14px; font-weight: 500; margin-top: 18px; word-break: break-all; }
+
+        @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+        @media (prefers-reduced-motion: reduce) { .intro { animation: none; } }
+
+        @media (max-width: 900px) { .grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 640px) {
+            header { border-radius: 24px; padding: 16px; justify-content: center; }
+            .intro { padding-top: 44px; }
+            .intro h1 { font-size: 38px; }
+            .grid { grid-template-columns: 1fr; }
+            .way { min-height: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">AAH Enterprises</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="why-choose-us.html">Why Choose Us</a>
+        <a href="contact.html" class="cta active">Contact</a>
+    </nav>
+</header>
+
+<section class="intro">
+    <h1>Let's <span class="grad">talk</span> about your idea</h1>
+    <p>Pick the way that is easiest for you. We usually reply within one working day.</p>
+</section>
+
+<section class="grid">
+
+    <a class="way" href="mailto:contact.aahenterprises@gmail.com">
+        <div><h2>Email</h2><p>Best for project details and quotes.</p></div>
+        <span>contact.aahenterprises@gmail.com</span>
+    </a>
+
+    <a class="way" href="https://wa.me/920000000000" target="_blank" rel="noopener">
+        <div><h2>WhatsApp</h2><p>Quick chat and fast replies.</p></div>
+        <span>Message us</span>
+    </a>
+
+    <a class="way" href="https://www.fiverr.com/YOUR-FIVERR-USERNAME" target="_blank" rel="noopener">
+        <div><h2>Fiverr</h2><p>Hire us safely through Fiverr.</p></div>
+        <span>View our profile</span>
+    </a>
+
+    <a class="way" href="https://www.upwork.com/freelancers/YOUR-UPWORK-ID" target="_blank" rel="noopener">
+        <div><h2>Upwork</h2><p>Hire us safely through Upwork.</p></div>
+        <span>View our profile</span>
+    </a>
+
+    <a class="way" href="https://www.facebook.com/YOUR-FACEBOOK-PAGE" target="_blank" rel="noopener">
+        <div><h2>Facebook</h2><p>Follow our page for updates.</p></div>
+        <span>Visit our page</span>
+    </a>
+
+    <a class="way" href="https://www.instagram.com/YOUR-INSTAGRAM-USERNAME" target="_blank" rel="noopener">
+        <div><h2>Instagram</h2><p>See our latest work and news.</p></div>
+        <span>Follow us</span>
+    </a>
+
+</section>
+
+</body>
+</html>

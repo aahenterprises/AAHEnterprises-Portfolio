@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About | AAH Enterprises</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            color: #e9ecff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background:
+                    radial-gradient(circle at 85% 8%, rgba(124,58,237,0.45), transparent 40%),
+                    radial-gradient(circle at 5% 55%, rgba(34,211,238,0.20), transparent 40%),
+                    radial-gradient(circle at 75% 92%, rgba(37,99,235,0.35), transparent 45%),
+                    #070920;
+        }
+
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            gap: 16px; flex-wrap: wrap;
+            margin: 22px 5% 0; padding: 12px 14px 12px 26px;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 60px;
+            background: rgba(255,255,255,0.06);
+            backdrop-filter: blur(14px);
+        }
+        .logo { font-family: 'Playfair Display', Georgia, serif; font-size: 22px; color: #fff; }
+        nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+        nav a { color: #b9c0e6; text-decoration: none; font-size: 14px; padding: 9px 14px; border-radius: 30px; }
+        nav a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+        nav a.active { color: #fff; background: rgba(124,58,237,0.55); }
+        nav a.cta { background: linear-gradient(90deg, #7c3aed, #2563eb); color: #fff; }
+
+        h1, h2 { font-family: 'Playfair Display', Georgia, serif; color: #fff; }
+        .grad {
+            background: linear-gradient(90deg, #a78bfa, #22d3ee);
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+        }
+
+        .intro { padding: 70px 8% 40px; max-width: 920px; animation: rise 0.9s ease both; }
+        .intro h1 { font-size: 56px; line-height: 1.1; margin-bottom: 20px; }
+        .intro p { font-weight: 300; color: #c4caee; line-height: 1.9; max-width: 620px; margin-bottom: 14px; }
+
+        /* Numbers */
+        .stats {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+            padding: 20px 8% 60px;
+        }
+        .stat {
+            padding: 30px 26px;
+            border: 1px solid rgba(255,255,255,0.14);
+            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(124,58,237,0.22), rgba(34,211,238,0.08));
+        }
+        .stat b {
+            display: block;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 54px; line-height: 1;
+            background: linear-gradient(90deg, #fff, #67e8f9);
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+        }
+        .stat span { display: block; margin-top: 10px; color: #b9c0e6; font-size: 14px; }
+
+        /* Mission / Vision */
+        .two { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; padding: 30px 8% 70px; border-top: 1px solid rgba(255,255,255,0.12); }
+        .two h2 { font-size: 32px; margin-bottom: 12px; }
+        .two p { font-weight: 300; color: #b9c0e6; line-height: 1.9; }
+
+        /* How we work */
+        .work { padding: 10px 8% 80px; }
+        .work > h2 { font-size: 38px; margin-bottom: 26px; }
+        .step { display: flex; gap: 22px; padding: 22px 0; border-top: 1px solid rgba(255,255,255,0.12); }
+        .step:last-child { border-bottom: 1px solid rgba(255,255,255,0.12); }
+        .step b { font-family: 'Playfair Display', Georgia, serif; font-size: 30px; color: #67e8f9; min-width: 44px; }
+        .step h3 { font-size: 18px; font-weight: 500; color: #fff; margin-bottom: 4px; }
+        .step p { font-weight: 300; color: #b9c0e6; line-height: 1.7; }
+
+        .final { margin: 0 8% 90px; padding: 50px 30px; text-align: center;
+            border: 1px solid rgba(255,255,255,0.14); border-radius: 26px;
+            background: linear-gradient(135deg, rgba(124,58,237,0.25), rgba(34,211,238,0.12)); }
+        .final h2 { font-size: 34px; margin-bottom: 10px; }
+        .final p { color: #c4caee; font-weight: 300; margin-bottom: 24px; }
+        .btn { display: inline-block; padding: 15px 36px; border-radius: 40px; text-decoration: none; font-weight: 500; color: #fff;
+            background: linear-gradient(90deg, #7c3aed, #2563eb, #22d3ee); box-shadow: 0 10px 30px rgba(124,58,237,0.45); }
+
+        @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+        @media (prefers-reduced-motion: reduce) { .intro { animation: none; } }
+
+        @media (max-width: 760px) {
+            header { border-radius: 24px; padding: 16px; justify-content: center; }
+            .intro { padding-top: 44px; }
+            .intro h1 { font-size: 38px; }
+            .stats, .two { grid-template-columns: 1fr; }
+            .two { gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">AAH Enterprises</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="why-choose-us.html">Why Choose Us</a>
+        <a href="contact.html" class">Contact</a>
+    </nav>
+</header>
+
+<section class="intro">
+    <h1>A software company built on <span class="grad">trust and clean code</span></h1>
+    <p>AAH Enterprises designs and builds websites, mobile apps and custom software for businesses that want to grow online.</p>
+    <p>We are a young, focused team. That means every client gets direct attention, fast replies and a product we are proud to put our name on.</p>
+</section>
+
+<!-- Numbers: update these as your real work grows -->
+<section class="stats">
+    <div class="stat"><b>0</b><span>Projects completed</span></div>
+    <div class="stat"><b>Client First</b><span>We build exactly what you need.</span></div>
+    <div class="stat"><b>2026</b><span>Year founded</span></div>
+</section>
+
+<section class="two">
+    <div>
+        <h2>Our mission</h2>
+        <p>To give every business, small or big, access to professional software that is fast, reliable and fairly priced.</p>
+    </div>
+    <div>
+        <h2>Our vision</h2>
+        <p>To grow into a trusted software house that clients recommend to others, built one honest project at a time.</p>
+    </div>
+</section>
+
+<section class="work">
+    <h2>How we work</h2>
+    <div class="step"><b>1</b><div><h3>We listen</h3><p>We learn about your business, your goals and your budget before starting any project.</p></div></div>
+    <div class="step"><b>2</b><div><h3>We plan</h3><p>You get a clear plan with timeline and price, so there are no surprises.</p></div></div>
+    <div class="step"><b>3</b><div><h3>We build</h3><p>We build in small steps and show you progress along the way.</p></div></div>
+    <div class="step"><b>4</b><div><h3>We launch and support</h3><p>We launch your product and stay available to fix and improve it.</p></div></div>
+</section>
+
+<section class="final">
+    <h2>Let's build something together</h2>
+    <p>Tell us about your idea and we will reply with a plan.</p>
+    <a class="btn" href="contact.html">Contact us</a>
+</section>
+
+</body>
+</html>

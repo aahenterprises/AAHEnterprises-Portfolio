@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projects | AAH Enterprises</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            color: #e9ecff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background:
+                    radial-gradient(circle at 85% 8%, rgba(124,58,237,0.45), transparent 40%),
+                    radial-gradient(circle at 5% 55%, rgba(34,211,238,0.20), transparent 40%),
+                    radial-gradient(circle at 75% 92%, rgba(37,99,235,0.35), transparent 45%),
+                    #070920;
+        }
+
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            gap: 16px; flex-wrap: wrap;
+            margin: 22px 5% 0; padding: 12px 14px 12px 26px;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 60px;
+            background: rgba(255,255,255,0.06);
+            backdrop-filter: blur(14px);
+        }
+        .logo { font-family: 'Playfair Display', Georgia, serif; font-size: 22px; color: #fff; }
+        nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+        nav a { color: #b9c0e6; text-decoration: none; font-size: 14px; padding: 9px 14px; border-radius: 30px; }
+        nav a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+        nav a.active { color: #fff; background: rgba(124,58,237,0.55); }
+        nav a.cta { background: linear-gradient(90deg, #7c3aed, #2563eb); color: #fff; }
+
+        .intro { padding: 70px 8% 30px; max-width: 900px; animation: rise 0.9s ease both; }
+        .intro h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 56px; line-height: 1.1; color: #fff; margin-bottom: 18px;
+        }
+        .intro h1 span {
+            background: linear-gradient(90deg, #a78bfa, #22d3ee);
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+        }
+        .intro p { font-weight: 300; color: #c4caee; line-height: 1.9; max-width: 580px; }
+
+        .grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+            padding: 30px 8% 80px;
+        }
+        .card {
+            display: flex; flex-direction: column;
+            border: 1px solid rgba(255,255,255,0.14);
+            border-radius: 20px; overflow: hidden;
+            background: rgba(255,255,255,0.05);
+        }
+        .thumb {
+            height: 190px;
+            display: flex; align-items: center; justify-content: center;
+            background: linear-gradient(135deg, #2a1a6e, #1b4fa8 60%, #0f8aa8) center / cover no-repeat;
+            color: rgba(255,255,255,0.75); font-size: 14px; letter-spacing: 1px;
+        }
+        .body { padding: 22px 24px 26px; display: flex; flex-direction: column; flex: 1; }
+        .tag {
+            align-self: flex-start;
+            padding: 4px 12px; margin-bottom: 12px;
+            border: 1px solid rgba(34,211,238,0.5); border-radius: 30px;
+            color: #67e8f9; font-size: 12px;
+        }
+        .card h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 24px; color: #fff; margin-bottom: 8px; }
+        .card p { font-weight: 300; color: #b9c0e6; line-height: 1.7; font-size: 14px; margin-bottom: 16px; }
+        .link { margin-top: auto; color: #67e8f9; text-decoration: none; font-size: 14px; font-weight: 500; }
+        .link:hover { color: #fff; }
+        .soon .link { color: #7d85ad; pointer-events: none; }
+
+        .final {
+            margin: 0 8% 90px; padding: 50px 30px; text-align: center;
+            border: 1px solid rgba(255,255,255,0.14); border-radius: 26px;
+            background: linear-gradient(135deg, rgba(124,58,237,0.25), rgba(34,211,238,0.12));
+        }
+        .final h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 34px; color: #fff; margin-bottom: 10px; }
+        .final p { color: #c4caee; font-weight: 300; margin-bottom: 24px; }
+        .btn {
+            display: inline-block; padding: 15px 36px; border-radius: 40px;
+            text-decoration: none; font-weight: 500; color: #fff;
+            background: linear-gradient(90deg, #7c3aed, #2563eb, #22d3ee);
+            box-shadow: 0 10px 30px rgba(124,58,237,0.45);
+        }
+
+        @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+        @media (prefers-reduced-motion: reduce) { .intro { animation: none; } }
+
+        @media (max-width: 900px) { .grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 640px) {
+            header { border-radius: 24px; padding: 16px; justify-content: center; }
+            .intro { padding-top: 44px; }
+            .intro h1 { font-size: 38px; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">AAH Enterprises</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="why-choose-us.html">Why Choose Us</a>
+        <a href="contact.html" class>Contact</a>
+    </nav>
+</header>
+
+<section class="intro">
+    <h1>Our <span>work</span></h1>
+    <p>A look at what we build. New projects are being added as we complete them.</p>
+</section>
+
+<section class="grid">
+
+    <!--
+      NEW PROJECT TEMPLATE: copy the card below, paste it above the
+      Coming Soon cards (outside this comment), then change the text.
+
+      <div class="card">
+        <div class="thumb" style="background-image:url('images/project-name.jpg'), linear-gradient(135deg,#2a1a6e,#1b4fa8 60%,#0f8aa8)"></div>
+        <div class="body">
+          <span class="tag">Web</span>
+          <h3>Project Name</h3>
+          <p>One or two lines about what you built and the result.</p>
+          <a class="link" href="https://your-live-link.com">View project</a>
+        </div>
+      </div>
+    -->
+
+    <div class="card">
+        <div class="thumb" style="background-image:url('images/aah-website.jpg'), linear-gradient(135deg,#2a1a6e,#1b4fa8 60%,#0f8aa8)"></div>
+        <div class="body">
+            <span class="tag">Web</span>
+            <h3>AAH Enterprises Website</h3>
+            <p>Our own company website: a modern, responsive multi-page site built with HTML and CSS, designed to work on phones and desktops.</p>
+            <a class="link" href="https://github.com/aahenterprises/aah-website" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+    </div>
+
+    <div class="card soon">
+        <div class="thumb">COMING SOON</div>
+        <div class="body">
+            <span class="tag">Mobile</span>
+            <h3>Mobile App</h3>
+            <p>Our first mobile app project will be featured here very soon.</p>
+            <a class="link" href="#">Coming soon</a>
+        </div>
+    </div>
+
+    <div class="card soon">
+        <div class="thumb">COMING SOON</div>
+        <div class="body">
+            <span class="tag">Software</span>
+            <h3>Custom Software</h3>
+            <p>Our first software project will be featured here very soon.</p>
+            <a class="link" href="#">Coming soon</a>
+        </div>
+    </div>
+
+</section>
+
+<section class="final">
+    <h2>Want to be our next project?</h2>
+    <p>Tell us your idea and we will build it with full care.</p>
+    <a class="btn" href="contact.html">Start your project</a>
+</section>
+
+</body>
+</html>
