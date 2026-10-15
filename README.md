@@ -22,13 +22,6 @@ A modern, responsive multi-page website that introduces the company, its service
 - HTML5
 - CSS3 (gradients, flexbox, grid, responsive design)
 - Google Fonts (Playfair Display and Poppins)
-
-## How to run
-
-1. Download or clone this repository.
-2. Open `index.html` in any browser.
-
-No installation is needed.
 <img width="1220" height="596" alt="Screenshot 2026-10-15 182623" src="https://github.com/user-attachments/assets/ceb557eb-323c-4652-9631-e89a352a1b28" />
 <img width="1340" height="467" alt="Screenshot 2026-10-15 182525" src="https://github.com/user-attachments/assets/693b88d0-2f9c-4017-ba4c-cd5857f83dd2" />
 <img width="1277" height="471" alt="Screenshot 2026-10-15 182312" src="https://github.com/user-attachments/assets/bc72ccbc-7732-4a0e-972a-25288cdad693" />
